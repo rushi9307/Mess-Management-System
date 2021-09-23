@@ -1,0 +1,36 @@
+.nav{
+    display: "grid";
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    background-color: green;
+    height: 70px;
+    display: flexbox;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-right: 10px;
+    font-size: 19px;
+    color: white;   
+    margin-top: 7px;
+}
+
+.navlink{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    font-size: 19px;
+    color: white;   
+    text-decoration: none;
+    margin-right: 15px;
+    float: left;
+    text-decoration: none;
+}
+
+ a :hover{
+    font-weight: bold;
+    text-decoration: none;
+}
+

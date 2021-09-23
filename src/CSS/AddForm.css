@@ -1,0 +1,12 @@
+.tbl{
+    width: 240px;
+    text-align: center;
+    
+    margin-bottom: 200px;
+}
+
+.btnAdd{
+    font-size: 20px;
+    width: 250px;
+    margin-bottom: 10px;
+}

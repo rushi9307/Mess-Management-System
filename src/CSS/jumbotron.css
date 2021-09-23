@@ -1,0 +1,54 @@
+  
+  #logo{
+  color: green;
+  font-size: 50px;
+  }
+  
+  #fontColor{
+    color: white;
+    text-decoration: none;
+  }
+  #menufontColor{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    float: left;
+    width: 140%;
+  }
+  
+  .jumbotron {
+    background-image: url("https://i.pinimg.com/originals/1c/f1/bd/1cf1bdde671b7f34f67ba726f3789248.jpg");
+    background-size: cover;
+    height: 840px;
+  }
+  
+  div.school-options-dropdown {
+    text-align: center;
+    margin-top: 190px;
+  }
+  
+  .dropdown {
+    text-align:center;
+  }
+  
+  .dropdown-menu {
+    text-align: center;
+  }
+  
+  .dropdown-menu a{
+    text-decoration: none;
+    font-size: 25px;
+  }
+  
+  .dropdowncitysize{
+    font-size: 25px;
+    border-radius: 8px;
+    color: white;
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+
+  .jumbodropdown{
+    color: white;
+  }
+  
