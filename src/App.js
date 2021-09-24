@@ -14,6 +14,7 @@ import UserLogin from './Components/UserLogin';
 import UserRegistration from './Components/UserRegistration';
 import AddMenu from './Components/AddMenu';
 import MenuList from './Components/MenuList';
+import UpdateMenu from './Components/UpdateMenu';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
                          <Route path="/userLogin" component={UserLogin} ></Route>
                          <Route path="/add-menu" component={AddMenu} ></Route>
                          <Route path="/menu-list" component={MenuList} ></Route>
+                         <Route path="/update-menu" component={UpdateMenu} />
                   </Switch>
               </div>
               <Footer/>

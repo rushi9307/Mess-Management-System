@@ -18,13 +18,13 @@ constructor(props){
 }
 handleLogin=(e)=>{
     e.preventDefault();
-    console.log("Owner details"+this.state.email+" "+this.state.password);
+    
     OwnerService.authenticateOwner(this.state.email,this.state.password).then(response=>{
         this.setState({owner:response.data});
-        window.localStorage.setItem('owner',this.state.owner);
+        window.localStorage.setItem('ownerId',this.state.owner.id);
         console.log("Welcome "+this.state.owner.firstName);
         console.log("Logged in successfully");
-        this.props.history.push('/');
+        this.props.history.push('/menu-list');
     });
 }
 onChange = (e) =>{

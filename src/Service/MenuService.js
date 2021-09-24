@@ -1,20 +1,27 @@
 import axios from "axios";
 
-const MENU_REST_API_URL='http://localhost:8080/kitchen';
+const MENU_REST_API_URL='http://localhost:8080/menu';
 
 class MenuService{
+
+    getMenuList(ownerId){
+        return axios.get(MENU_REST_API_URL+"/list/"+ownerId)
+    }
+    fetchMenuById(menuId){
+        return axios.get(MENU_REST_API_URL+"/getMenu/"+menuId);
+    }
 
     addMenu(menu,ownerId){
         return axios.post(MENU_REST_API_URL+'/addMenu/'+ownerId, menu);
     }
 
-    deleteMenu(menu,ownerId){
-        return axios.delete(MENU_REST_API_URL+'/deleteMenu/'+ownerId);
+    deleteMenu(menuId,ownerId){
+        return axios.delete(MENU_REST_API_URL+'/deleteMenu/'+menuId+"/"+ownerId);
     }
   
 
-    updateOwner(menu){
-        return axios.put(MENU_REST_API_URL+'/updateOwner',menu);
+    updateMenu(menu,ownerId){
+        return axios.put(MENU_REST_API_URL+'/updateMenu/'+ownerId,menu);
     }
 
    
