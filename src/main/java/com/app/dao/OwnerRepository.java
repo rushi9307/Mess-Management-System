@@ -1,6 +1,7 @@
 package com.app.dao;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -18,13 +19,9 @@ public interface OwnerRepository extends JpaRepository<OwnerAdmin, Integer>{
 	
 	void deleteById(long ownerId);
 	
-	OwnerAdmin getById(long id);
-	
-	@Query(value = "select o.* from owner_admin_tbl o where o.email=?1 and o.password=?2", nativeQuery = true)
-	OwnerAdmin authenticateOwner(String email,String password);
+	OwnerAdmin findById(long id);
 	
 	
-	
-	
+	Optional<OwnerAdmin> findByEmailAndPassword(String email,String password);	
 	
 }

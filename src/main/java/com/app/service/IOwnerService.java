@@ -1,6 +1,7 @@
 package com.app.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
@@ -15,11 +16,11 @@ public interface IOwnerService{
 	//add a method to add new Owner
 	OwnerAdmin saveOwner(OwnerAdmin transientOwner);
 	
-	void deleteOwner(int ownerId);
+	void deleteOwner(long ownerId);
 	
-	OwnerAdmin getOwnerById(int id);
+	OwnerAdmin getOwnerById(long id);
 	
 	OwnerAdmin updateOwner(OwnerAdmin owner);
 	
-	OwnerAdmin authenticateOwner(String email,String password);
+	Optional<OwnerAdmin> authenticateOwner(String email,String password);
 }

@@ -1,6 +1,7 @@
 package com.app.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -40,7 +41,7 @@ public class OwnerServiceImpl implements IOwnerService {
 
 
 	@Override
-	public void deleteOwner(int ownerId) {
+	public void deleteOwner(long ownerId) {
 		ownerRepository.deleteById(ownerId);
 		
 	}
@@ -48,9 +49,9 @@ public class OwnerServiceImpl implements IOwnerService {
 
 
 	@Override
-	public OwnerAdmin getOwnerById(int id) {
+	public OwnerAdmin getOwnerById(long id) {
 		
-		return ownerRepository.getById(id);
+		return ownerRepository.findById(id);
 	}
 
 
@@ -63,10 +64,8 @@ public class OwnerServiceImpl implements IOwnerService {
 
 
 	@Override
-	public OwnerAdmin authenticateOwner(String email, String password) {
-		OwnerAdmin owner=ownerRepository.authenticateOwner(email, password);
-		System.out.println(owner.getMenuList());
-		return owner;
+	public Optional<OwnerAdmin> authenticateOwner(String email, String password) {
+		return ownerRepository.findByEmailAndPassword(email, password);
 	}
 	
 	
